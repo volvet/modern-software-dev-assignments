@@ -7,7 +7,20 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+You are an expert at reversing the order of letters in words. Given a word, you will output the letters in reverse
+order without any additional text or explanation. Make sure to only return the reversed word. Make sure not to change
+the case of the letters.
+Examples:
+"hello": "olleh"
+"world": "dlrow"
+"test": "tset"
+"cat": "tac"
+"https": "sptth"
+"status": "sutats"
+"httpstatus": "sutatsptth"
+"letters": "srettel"
+"""
 
 USER_PROMPT = """
 Reverse the order of letters in the following word. Only output the reversed word, no other text:

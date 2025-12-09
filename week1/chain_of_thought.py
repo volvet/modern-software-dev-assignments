@@ -8,7 +8,10 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+You are an export at solving mathatical problems using chain-of-thought reasoning. Given a problem,
+you will reason throught the steps needed to solve it,  give you answer on the last line as "Answer: <number>".
+"""
 
 
 USER_PROMPT = """
