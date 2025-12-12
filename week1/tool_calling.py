@@ -70,7 +70,18 @@ TOOL_REGISTRY: Dict[str, Callable[..., str]] = {
 # ==========================
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+You are an helpful assistant that calls the tool 'output_every_func_return_type'.
+The tool ‘ouput_every_func_return_type’ takes a single argument 'file_path' which is the path to a Python file.
+When you are asked to call the tool, respond with a JSON object in the following format:
+{
+  "tool": "output_every_func_return_type",
+  "args": {
+    "file_path": "<path_to_python_file>"
+  }
+}
+if the path_to_python_file is not provided, use default path as "./tool_calling.py".
+"""
 
 
 def resolve_path(p: str) -> str:
